@@ -1,0 +1,15 @@
+.number {
+    font-family: "bold";
+    font-size: 26px;
+    background-image: linear-gradient(356deg, rgba(251, 96, 135, 1) 33%, rgb(103, 42, 57) 95%);
+    -webkit-background-clip: text; /* Para navegadores basados en WebKit (como Chrome y Safari) */
+    color: transparent; /* Hace que el texto sea transparente */
+    display: inline-block;
+    bottom: 18.5px;
+    position: relative;
+    margin-left:10px;
+  }
+  .superiorPartSquare{
+    background-color: hsl(235, 23%, 22%);
+
+}
