@@ -1,0 +1,5 @@
+.number {
+  
+    -webkit-background-clip: text; /* Para navegadores basados en WebKit (como Chrome y Safari) */
+
+  }

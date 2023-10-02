@@ -3,3 +3,7 @@
     src: url("../public/RedHatText-Bold.ttf");
 }
 
+body {
+    margin: 0;
+}
+

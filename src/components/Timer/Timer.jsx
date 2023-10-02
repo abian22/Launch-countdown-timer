@@ -3,26 +3,18 @@ import "./Timer.css";
 
 function Timer() {
   return (
-    <div
-      className="container"
-      style={{
-        position: "relative",
-        width: "50px",
-        height: "25px",
-        top: "30%",
-        left: "30%",
-        zIndex: "1",
-      }}
-    >
+    <>
+      <div className="timer-container">
       <div
         className="superiorPartSquare"
         style={{
+          width:"50px",
           height: "25px",
           display: "flex",
           position: "relative",
           zIndex: "1",
-          justifyContent: "center",
-          alignItems: "center",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
         }}
       ></div>
       <div
@@ -84,7 +76,8 @@ function Timer() {
           }}
         ></div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 
