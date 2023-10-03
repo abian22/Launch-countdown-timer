@@ -63,7 +63,7 @@ function App() {
           top: { xs: "40px", sm: "50px", lg: "20px", xl: "70px" },
           position: "relative",
           textAlign: "center",
-          marginLeft: { xs: "50%", sm: "35%", xl: "40%" },
+          marginLeft: { xs: "40%", sm: "35%", xl: "40%" },
         }}
       >
         <Box
