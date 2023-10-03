@@ -2,7 +2,7 @@ import React from "react";
 import hills from "../images/pattern-hills.svg";
 import stars from "../images/bg-stars.svg";
 import TimerTest from "./components/TimerTest/TimerTest";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import facebook from "../images/icon-facebook.svg";
 import pinterest from "../images/icon-pinterest.svg";
 import instagram from "../images/icon-instagram.svg";
@@ -90,10 +90,77 @@ function App() {
           justifyContent: "center",
         }}
       >
-        <TimerTest timeRemaining={timeRemaining.days} />
-        <TimerTest timeRemaining={timeRemaining.hours} />
-        <TimerTest timeRemaining={timeRemaining.minutes} />
-        <TimerTest timeRemaining={timeRemaining.seconds} />
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
+            <TimerTest timeRemaining={timeRemaining.days} />
+            <Typography
+              sx={{
+                color: " hsl(237, 18%, 59%)",
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: { xs: "60px", lg: "78px" },
+                marginTop: { xs: "14px", lg: "-50px" },
+                fontFamily: "bold",
+                letterSpacing: "3px",
+                fontSize:"12px",
+              }}
+            >
+              DAYS
+            </Typography>
+          </div>
+          <div>
+            <TimerTest timeRemaining={timeRemaining.hours} />
+            <Typography
+              sx={{
+                color: " hsl(237, 18%, 59%)",
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: {xs:"55px", lg:"72px"},
+                marginTop: { xs: "14px", lg: "-50px"  },
+                fontFamily: "bold",
+                letterSpacing: "3px",
+                fontSize:"12px"
+              }}
+            >
+              HOURS
+            </Typography>
+          </div>
+          <div>
+            <TimerTest timeRemaining={timeRemaining.minutes} />
+            <Typography
+              sx={{
+                color: " hsl(237, 18%, 59%)",
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: {xs:"50px", lg:"62px"},
+                marginTop: { xs: "10px", lg: "-50px"  },
+                fontFamily: "bold",
+                letterSpacing: "3px",
+                fontSize:"12px"
+
+              }}
+            >
+              MINUTES
+            </Typography>
+          </div>
+          <div>
+            <TimerTest timeRemaining={timeRemaining.seconds} />
+            <Typography
+              sx={{
+                color: " hsl(237, 18%, 59%)",
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: {xs:"47px", lg:"62px"},
+                marginTop: { xs: "10px" , lg: "-50px" },
+                fontFamily: "bold",
+                letterSpacing: "3px",
+                fontSize:"12px"
+              }}
+            >
+              SECONDS
+            </Typography>
+          </div>
+        </div>
         <img
           src={stars}
           style={{
