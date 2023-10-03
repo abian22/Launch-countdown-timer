@@ -12,6 +12,9 @@
 
   .superiorPartSquare{
     background-color: hsl(235, 23%, 22%);
+    animation: fall 1s ease-in-out; /* Aplicamos la animación */
+    animation-fill-mode: forwards; 
 
 }
+
 

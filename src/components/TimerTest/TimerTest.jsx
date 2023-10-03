@@ -1,11 +1,24 @@
 import React from "react";
 import "./TimerTest.css";
 import { Box } from "@mui/material";
+import { useState, useEffect } from "react";
 
-function TimerTest() {
+function TimerTest({ timeRemaining }) {
+
+  const [pageTransition, setPageTransition] = useState(false);
+
+  useEffect(() => {
+    setPageTransition(true);
+    const timeout = setTimeout(() => {
+      setPageTransition(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [timeRemaining]);
   return (
     <>
       <Box
+        className={` ${pageTransition ? "page-transition" : ""}`} 
         sx={{
           width: { xs: "70px", sm: "90px",lg:"120px" },
           height: { xs: "60px", sm: "80px", lg:"110px" },
@@ -17,8 +30,7 @@ function TimerTest() {
           bottom:{lg:"80px"},
           boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
           marginTop:{lg:"5%", xl:"0px"},
-
-
+          animation: "flip-bottom 250ms easte-out 250ms"
         }}
       >
         <Box
@@ -64,8 +76,8 @@ function TimerTest() {
           }}
         />
         <Box
-          className="number"
-          sx={{
+            className="number"
+            sx={{
             fontFamily: "bold",
             zIndex: "999",
             marginTop: "15px",
@@ -73,13 +85,13 @@ function TimerTest() {
             backgroundImage:
               "linear-gradient(356deg, rgba(251, 96, 135, 1) 33%, rgb(103, 42, 57) 95%)",
             color: "transparent",
-            display: "inline-block",
+            display: "flex",
             bottom: {xs:"15.5px", sm:"16px",lg:"19px"},
             position: "relative",
-            marginLeft: "15px",
+            justifyContent:"center",
           }}
         >
-          23
+              {timeRemaining}
         </Box>
       </Box>
     </>

@@ -1,5 +1,5 @@
 .number {
-  
+    transition: transform 0.3s ease-in-out;
     -webkit-background-clip: text; /* Para navegadores basados en WebKit (como Chrome y Safari) */
 
   }
