@@ -1,24 +1,13 @@
 import React from "react";
 import "./TimerTest.css";
 import { Box } from "@mui/material";
-import { useState, useEffect } from "react";
+
 
 function TimerTest({ timeRemaining }) {
 
-  const [pageTransition, setPageTransition] = useState(false);
-
-  useEffect(() => {
-    setPageTransition(true);
-    const timeout = setTimeout(() => {
-      setPageTransition(false);
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, [timeRemaining]);
   return (
     <>
       <Box
-        className={` ${pageTransition ? "page-transition" : ""}`} 
         sx={{
           width: { xs: "70px", sm: "90px",lg:"120px" },
           height: { xs: "60px", sm: "80px", lg:"110px" },
