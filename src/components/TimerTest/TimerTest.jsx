@@ -36,14 +36,14 @@ function TimerTest({ timeRemaining }) {
         <Box
           className="semiCircle"
           sx={{
-            width: "5.4px",
-            height: "5px",
+            width: {xs:"5.4px", lg:"6px"},
+            height:{ xs:"5px", lg:"7px"},
             borderColor: "hsl(234, 17%, 12%)",
             backgroundColor: "black",
             borderTopLeftRadius: "100%",
             borderBottomLeftRadius: "100%",
             position: "absolute",
-            left: { xs: "68px", sm: "88px", lg:"119px" },
+            left: { xs: "68px", sm: "88px", lg:"118px" },
             top: { xs: "27px", sm: "37px", lg:"52px" },
             transform: "translateX(-50%)",
           }}
@@ -51,14 +51,14 @@ function TimerTest({ timeRemaining }) {
         <Box
           className="semiCircle"
           sx={{
-            width: "5.4px",
-            height: "5px",
+            width: {xs:"5.4px", lg:"6px"},
+            height: {xs:"5px", lg:"7px"},
             borderColor: "hsl(234, 17%, 12%)",
             backgroundColor: "black",
             borderTopRightRadius: "100%",
             borderBottomRightRadius: "100%",
             position: "relative",
-            left: "1px",
+            left: {xs:"1px", lg:"2px"},
             top: { xs: "27px", sm: "37px", lg:"52px" },
             transform: "translateX(-50%)",
           }}
