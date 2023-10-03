@@ -76,7 +76,7 @@ function App() {
             fontSize: { xs: "20px", lg: "30px" },
             letterSpacing: "3px",
             zIndex: "999",
-            marginTop: "10%",
+            marginTop: {xs:"40%",sm:"10%"},
           }}
         >
           WE´RE LAUNCHING SOON
