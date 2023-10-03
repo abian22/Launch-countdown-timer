@@ -10,7 +10,10 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const launchDate = new Date("2023-12-31T00:00:00").getTime();
+  const initialLaunchDate = new Date();
+  initialLaunchDate.setDate(initialLaunchDate.getDate() + 9);
+
+  const [launchDate, setLaunchDate] = useState(initialLaunchDate);
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
   useEffect(() => {
@@ -23,7 +26,7 @@ function App() {
 
   function calculateTimeRemaining() {
     const now = new Date().getTime();
-    const difference = launchDate - now;
+    const difference = launchDate.getTime() - now;
 
     if (difference <= 0) {
       return {
