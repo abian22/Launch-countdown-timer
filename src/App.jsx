@@ -63,7 +63,7 @@ function App() {
           top: { xs: "40px", sm: "50px", lg: "20px", xl: "70px" },
           position: "relative",
           textAlign: "center",
-          marginLeft: { xs: "25%", sm: "35%", xl: "40%" },
+          marginLeft: { xs: "50%", sm: "35%", xl: "40%" },
         }}
       >
         <Box
@@ -85,8 +85,8 @@ function App() {
       <Box
         sx={{
           backgroundColor: "hsl(235, 16%, 8%)",
-          width: "100vw",
-          height: "100vh",
+          width: {xs:"150vw", sm:"100vw"},
+          height: {xs:"150vh", sm:"100vh"},
           display: "flex",
           alignItems: "center",
           position: "relative",
